@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = '🏠 GiveExamples'
 theme = "PaperMod"
 
+[services.googleAnalytics]
+ID = "G-J3LM16S9PR"
+
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 
