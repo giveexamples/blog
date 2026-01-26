@@ -1,0 +1,108 @@
+<!-- Search Modal HTML -->
+<div id="search-modal">
+    <div class="search-content">
+        <div class="search-header">
+            <input type="text" id="modal-search-input" placeholder="Search..." autofocus>
+            <button class="search-close" onclick="closeSearchModal()">Close</button>
+        </div>
+        <ul id="modal-search-results"></ul>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+let fuse;
+let searchData;
+
+// Load search index
+fetch('{{ "index.json" | absURL }}')
+    .then(response => response.json())
+    .then(data => {
+        searchData = data;
+        const options = {
+            keys: ['title', 'content', 'summary'],
+            threshold: 0.3,
+            includeMatches: true,
+            minMatchCharLength: 2
+        };
+        fuse = new Fuse(data, options);
+    });
+
+// Add search button to header
+document.addEventListener('DOMContentLoaded', function() {
+    const logoSwitches = document.querySelector('.logo-switches');
+    if (logoSwitches) {
+        const searchButton = document.createElement('button');
+        searchButton.id = 'search-button';
+        searchButton.setAttribute('accesskey', '/');
+        searchButton.setAttribute('title', 'Search (Alt + /)');
+        searchButton.setAttribute('aria-label', 'Search');
+        searchButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        `;
+        searchButton.onclick = openSearchModal;
+        logoSwitches.appendChild(searchButton);
+    }
+});
+
+function openSearchModal() {
+    const modal = document.getElementById('search-modal');
+    modal.classList.add('active');
+    document.getElementById('modal-search-input').focus();
+}
+
+function closeSearchModal() {
+    const modal = document.getElementById('search-modal');
+    modal.classList.remove('active');
+    document.getElementById('modal-search-input').value = '';
+    document.getElementById('modal-search-results').innerHTML = '';
+}
+
+// Close modal on escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeSearchModal();
+    }
+});
+
+// Close modal when clicking outside
+document.getElementById('search-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeSearchModal();
+    }
+});
+
+// Search functionality
+document.getElementById('modal-search-input').addEventListener('input', function(e) {
+    const query = e.target.value;
+    const resultsContainer = document.getElementById('modal-search-results');
+
+    if (!query || !fuse) {
+        resultsContainer.innerHTML = '';
+        return;
+    }
+
+    const results = fuse.search(query);
+
+    if (results.length === 0) {
+        resultsContainer.innerHTML = '<li style="border:none;cursor:default;">No results found</li>';
+        return;
+    }
+
+    resultsContainer.innerHTML = results.slice(0, 10).map(result => {
+        const item = result.item;
+        const summary = item.summary || item.content.substring(0, 150) + '...';
+        return `
+            <li>
+                <a href="${item.permalink}">
+                    <div class="search-item-title">${item.title}</div>
+                    <div class="search-item-summary">${summary}</div>
+                </a>
+            </li>
+        `;
+    }).join('');
+});
+</script>

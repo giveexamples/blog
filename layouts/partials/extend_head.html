@@ -1,0 +1,124 @@
+<style>
+/* Search Modal Styles */
+#search-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+#search-modal.active {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
+.search-content {
+    background-color: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#modal-search-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--theme);
+    color: var(--primary);
+}
+
+#modal-search-input:focus {
+    outline: none;
+    border-color: var(--tertiary);
+}
+
+.search-close {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.search-close:hover {
+    background-color: var(--tertiary);
+}
+
+#modal-search-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#modal-search-results li {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#modal-search-results li:hover {
+    background-color: var(--tertiary);
+}
+
+#modal-search-results li a {
+    text-decoration: none;
+    color: var(--primary);
+    display: block;
+}
+
+#modal-search-results .search-item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#modal-search-results .search-item-summary {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Search button in header */
+#search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    margin-left: 10px;
+}
+
+#search-button:hover {
+    opacity: 0.7;
+}
+
+#search-button svg {
+    width: 20px;
+    height: 20px;
+}
+</style>

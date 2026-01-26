@@ -1,0 +1,7 @@
+.idea
+
+# Hugo build files
+.hugo_build.lock
+public/
+resources/_gen/
+resources/
