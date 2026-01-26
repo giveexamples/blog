@@ -1,0 +1,52 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    <div class="post-description">
+        Browse all article series and guides
+    </div>
+</header>
+
+<div class="article-series-list">
+    {{- $sections := where .Site.Pages "Kind" "section" }}
+    {{- $sections = where $sections "Section" "!=" "" }}
+
+    {{- range $sections }}
+        {{- $pages := .Pages }}
+        {{- $pageCount := len $pages }}
+
+        {{- if gt $pageCount 0 }}
+        <article class="series-card">
+            <div class="series-header">
+                <h2 class="series-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                <span class="series-count">{{ $pageCount }} articles</span>
+            </div>
+
+            {{- if .Description }}
+            <p class="series-description">{{ .Description }}</p>
+            {{- end }}
+
+            <div class="series-articles">
+                {{- range first 5 .Pages.ByDate.Reverse }}
+                <div class="series-article-item">
+                    <a href="{{ .Permalink }}" class="series-article-link">
+                        <span class="series-article-title">{{ .Title }}</span>
+                        <span class="series-article-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                    </a>
+                </div>
+                {{- end }}
+
+                {{- if gt $pageCount 5 }}
+                <div class="series-view-all">
+                    <a href="{{ .Permalink }}">View all {{ $pageCount }} articles →</a>
+                </div>
+                {{- end }}
+            </div>
+        </article>
+        {{- end }}
+    {{- end }}
+</div>
+
+{{- end }}{{/* end main */}}

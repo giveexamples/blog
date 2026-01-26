@@ -121,4 +121,237 @@
     width: 20px;
     height: 20px;
 }
+
+/* Tags Search Styles */
+.tags-search-container {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#tag-search {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--entry);
+    color: var(--primary);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#tag-search:focus {
+    outline: none;
+    border-color: var(--tertiary);
+    box-shadow: 0 0 0 3px rgba(var(--tertiary-rgb), 0.1);
+}
+
+#tag-search::placeholder {
+    color: var(--secondary);
+    opacity: 0.6;
+}
+
+.tags-count {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    white-space: nowrap;
+    min-width: 100px;
+    text-align: right;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tags-search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tags-count {
+        text-align: left;
+    }
+}
+
+/* Articles Page Styles */
+.article-series-list {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.series-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: var(--entry);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.series-card:hover {
+    border-color: var(--tertiary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.series-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.series-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.series-title a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.series-title a:hover {
+    color: var(--tertiary);
+}
+
+.series-count {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    background-color: var(--code-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+}
+
+.series-description {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.series-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.series-article-item {
+    border-left: 2px solid var(--border);
+    padding-left: 1rem;
+    transition: border-color 0.2s;
+}
+
+.series-article-item:hover {
+    border-color: var(--tertiary);
+}
+
+.series-article-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-decoration: none;
+    color: var(--primary);
+    gap: 1rem;
+}
+
+.series-article-link:hover .series-article-title {
+    color: var(--tertiary);
+}
+
+.series-article-title {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.series-article-date {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    white-space: nowrap;
+}
+
+.series-view-all {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.series-view-all a {
+    font-size: 0.9rem;
+    color: var(--tertiary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.series-view-all a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .series-card {
+        padding: 1.5rem;
+    }
+
+    .series-title {
+        font-size: 1.3rem;
+    }
+
+    .series-article-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .series-article-date {
+        font-size: 0.8rem;
+    }
+}
+
+/* Back to Section Link */
+.back-to-section {
+    margin-bottom: 1.5rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background-color: var(--entry);
+}
+
+.back-link:hover {
+    color: var(--primary);
+    border-color: var(--tertiary);
+    background-color: var(--tertiary);
+    transform: translateX(-2px);
+}
+
+.back-link svg {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .back-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .back-link svg {
+        width: 18px;
+        height: 18px;
+    }
+}
 </style>

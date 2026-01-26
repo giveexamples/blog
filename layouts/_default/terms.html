@@ -1,0 +1,104 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+{{- if eq .Type "tags" }}
+<div class="tags-search-container">
+    <input
+        type="text"
+        id="tag-search"
+        placeholder="Search tags..."
+        autocomplete="off"
+    />
+    <span class="tags-count" id="tags-count"></span>
+</div>
+{{- end }}
+
+<ul class="terms-tags" id="tags-list">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+    <li data-tag-name="{{ .Name | lower }}">
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li>
+    {{- end }}
+    {{- end }}
+</ul>
+
+{{- if eq .Type "tags" }}
+<div id="no-results" class="no-results" style="display: none;">
+    <p>No tags found matching your search.</p>
+</div>
+
+<script>
+(function() {
+    const searchInput = document.getElementById('tag-search');
+    const tagsList = document.getElementById('tags-list');
+    const tagsCount = document.getElementById('tags-count');
+    const noResults = document.getElementById('no-results');
+    const allTags = tagsList.querySelectorAll('li');
+    const totalTags = allTags.length;
+
+    function updateTagsCount(visibleCount) {
+        if (searchInput.value.trim() === '') {
+            tagsCount.textContent = `${totalTags} tags`;
+        } else {
+            tagsCount.textContent = `${visibleCount} of ${totalTags} tags`;
+        }
+    }
+
+    function filterTags() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        allTags.forEach(tag => {
+            const tagName = tag.getAttribute('data-tag-name');
+            if (tagName.includes(searchTerm)) {
+                tag.style.display = '';
+                visibleCount++;
+            } else {
+                tag.style.display = 'none';
+            }
+        });
+
+        // Show/hide no results message
+        if (visibleCount === 0 && searchTerm !== '') {
+            noResults.style.display = 'block';
+            tagsList.style.display = 'none';
+        } else {
+            noResults.style.display = 'none';
+            tagsList.style.display = '';
+        }
+
+        updateTagsCount(visibleCount);
+    }
+
+    // Initialize count
+    updateTagsCount(totalTags);
+
+    // Add event listener for search
+    searchInput.addEventListener('input', filterTags);
+
+    // Focus search on "/" key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+            e.preventDefault();
+            searchInput.focus();
+        }
+    });
+})();
+</script>
+{{- end }}
+
+{{- end }}{{/* end main */ -}}
