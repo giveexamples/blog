@@ -33,9 +33,9 @@ weight = 10
 ShowTags = true
 
 [params.assets]
-favicon = "/favicon.ico"
-favicon16x16 = "/favicon-16x16.png"
-favicon32x32 = "/favicon-32x32.png"
+favicon = "/blog/favicon.ico"
+favicon16x16 = "/blog/favicon-16x16.png"
+favicon32x32 = "/blog/favicon-32x32.png"
 
 # Giscus Comments Configuration
 # Get your repo-id and category-id from: https://giscus.app
