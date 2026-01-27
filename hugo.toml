@@ -43,9 +43,9 @@ favicon32x32 = "/favicon-32x32.png"
 # Get your repo-id and category-id from: https://giscus.app
 [params.giscus]
 repo = "giveexamples/blog"
-repoID = "REPLACE_WITH_YOUR_REPO_ID"  # Visit https://giscus.app to get this
-category = "Announcements"
-categoryID = "REPLACE_WITH_YOUR_CATEGORY_ID"  # Visit https://giscus.app to get this
+repoID = "R_kgDORBgE8g"  # Visit https://giscus.app to get this
+category = "Q&A"
+categoryID = "DIC_kwDORBgE8s4C1fQ8"  # Visit https://giscus.app to get this
 mapping = "pathname"
 strict = "0"
 reactionsEnabled = "1"
