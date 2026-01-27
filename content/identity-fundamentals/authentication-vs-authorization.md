@@ -8,8 +8,6 @@ tags: ["authentication", "authorization", "auth", "login", "security", "access-c
 comments: true
 ---
 
-# Authentication vs Authorization
-
 ## Introduction
 
 One of the most common sources of confusion in identity and access management is the difference between authentication and authorization. While these terms are often used interchangeably, they represent distinct concepts that serve different purposes in security systems.
@@ -27,9 +25,7 @@ One of the most common sources of confusion in identity and access management is
 
 ### Authentication Flow Example
 
-```
-User → "I'm Alice" → System checks credentials → Verified ✓
-```
+![Authentication Flow](../../images/identity-fundamentals/authentication.png)
 
 ## Authorization: What Can You Do?
 
@@ -43,9 +39,7 @@ User → "I'm Alice" → System checks credentials → Verified ✓
 
 ### Authorization Flow Example
 
-```
-Authenticated User (Alice) → Request: "Read file X" → Check permissions → Allowed/Denied
-```
+![Authorization Flow](../../images/identity-fundamentals/authorization.png)
 
 ## The Key Difference
 
