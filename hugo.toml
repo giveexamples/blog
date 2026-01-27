@@ -1,4 +1,4 @@
-baseURL = 'https://giveexamples.github.io/blog/'
+baseURL = 'https://giveexamples.com/blog/'
 languageCode = 'en-us'
 title = '🏠 GiveExamples'
 theme = "PaperMod"
