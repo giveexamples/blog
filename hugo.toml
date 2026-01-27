@@ -1,4 +1,6 @@
-baseURL = 'https://giveexamples.com'
+baseURL = "https://giveexamples.com/blog/"
+relativeURLs = false
+canonifyURLs = false
 languageCode = 'en-us'
 title = '🏠 GiveExamples'
 theme = "PaperMod"
