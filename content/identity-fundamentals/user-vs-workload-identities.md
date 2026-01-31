@@ -8,8 +8,6 @@ tags: ["identity", "workload-identity", "service-accounts", "security", "zero-tr
 comments: true
 ---
 
-# User vs Workload Identities
-
 ## Introduction
 
 Not all identities are human. In modern distributed systems, we have two primary types of identities: **user identities** (humans) and **workload identities** (machines, services, applications). Understanding the differences is crucial for building secure systems.
