@@ -28,6 +28,14 @@ Outside of engineering, I am a passionate and professional Judoka. I currently h
 
 One of my personal goals is to one day compete at a high level and work towards becoming a **European champion**. Judo, much like software engineering, teaches patience, resilience, continuous learning, and respect for the process.
 
+### Judo Journey Timeline
+
+- **October 1, 2024**: Started judo training with white belt
+- **February 4, 2025**: Achieved blue belt after 4 months of training
+- **March 1, 2025**: Competed in offene Münchner Einzelmeisterschaft für Männer & Frauen - 3rd place in -81kg weight class 🥉
+- **March 1, 2026**: Competing in [offene Münchner Einzelmeisterschaft für Männer & Frauen](https://www.bayernjudo.de/termine/bezirke/bezirk-muenchen/offene-muenchenr-em-fuer-maenner-unf-frauen)
+- **April 25, 2026**: Brown belt kata examination
+
 ## Connect with Me
 
 * [LinkedIn](https://www.linkedin.com/in/saeed-afshari-22724a68/)
