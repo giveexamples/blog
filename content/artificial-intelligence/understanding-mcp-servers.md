@@ -4,7 +4,7 @@ date: 2026-02-15
 draft: false
 description: "A comprehensive guide to Model Context Protocol (MCP) servers and how to connect Claude Code to GitLab using MCP"
 weight: 1
-tags: ["MCP", "Model Context Protocol", "AI", "Claude Code", "GitLab", "integration", "OAuth", "API"]
+tags: ["MCP", "Model Context Protocol", "AI", "Claude Code", "GitLab"]
 comments: true
 ---
 
@@ -112,7 +112,7 @@ This starts an interactive session with Claude Code in your terminal.
 
 In the Claude Code chat interface, type:
 
-```
+```bash
 /mcp
 ```
 
