@@ -33,6 +33,7 @@ weight = 10
 
 [params]
 ShowTags = true
+mainSections = ["identity-fundamentals", "performance-optimization", "application-integration", "artificial-intelligence", "ai"]
 
 [params.assets]
 favicon = "/favicon.ico"
