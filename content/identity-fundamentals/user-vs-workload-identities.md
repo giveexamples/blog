@@ -123,7 +123,7 @@ metadata:
 
 Allows workloads in one environment to access resources in another without static credentials.
 
-```
+``` text
 GitHub Actions → OIDC Token → AWS STS → Temporary Credentials → Access AWS
 ```
 
@@ -154,7 +154,7 @@ Standards-based framework for workload identity in dynamic environments.
 
 ## Real-World Example: Microservices Architecture
 
-```
+``` text
 User Identity:
 ├── User logs in via OIDC → ID Token
 └── Frontend uses token to call API

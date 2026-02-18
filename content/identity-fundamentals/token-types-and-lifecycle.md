@@ -151,7 +151,7 @@ Access tokens are short-lived for security. Refresh tokens allow:
 
 ### Phase 1: Token Issuance
 
-``` json
+``` text
 User Authentication → Authorization Server → Issues Tokens
 ├── Access Token (short-lived)
 ├── Refresh Token (long-lived)
@@ -160,7 +160,7 @@ User Authentication → Authorization Server → Issues Tokens
 
 ### Phase 2: Token Usage
 
-``` json
+``` text
 Client → Access Token → Resource Server
 ├── Validates token signature
 ├── Checks expiration
@@ -170,7 +170,7 @@ Client → Access Token → Resource Server
 
 ### Phase 3: Token Refresh
 
-``` json
+``` text
 Client → Refresh Token → Authorization Server
 ├── Validates refresh token
 ├── Checks if revoked
@@ -180,7 +180,7 @@ Client → Refresh Token → Authorization Server
 
 ### Phase 4: Token Expiration/Revocation
 
-``` json
+``` text
 Token Expires:
 └── Client must refresh or re-authenticate
 
@@ -252,7 +252,7 @@ function validateJWT(token) {
 
 ### Backend for Frontend (BFF)
 
-``` json
+``` text
 Browser → Backend (BFF) → Resource API
          ├── Session Cookie
          └── Uses access token server-side
@@ -265,14 +265,14 @@ Benefits:
 
 ### Token Exchange
 
-``` json
+``` text
 External Token → Token Exchange Service → Internal Token
 └── Allows cross-domain/cross-organization access
 ```
 
 ### Phantom Tokens
 
-``` json
+``` text
 Opaque Token (external) → Gateway → JWT (internal) → Services
 └── External clients get opaque, internal services get JWT
 ```
@@ -281,7 +281,7 @@ Opaque Token (external) → Gateway → JWT (internal) → Services
 
 ### Refresh Token Rotation
 
-``` json
+``` text
 1. Client uses refresh token
 2. Server issues new access + new refresh token
 3. Old refresh token is invalidated
@@ -295,7 +295,7 @@ Benefits:
 
 ### Access Token Rotation
 
-``` json
+``` text
 1. Access token expires (15 min)
 2. Client automatically refreshes
 3. New access token issued

@@ -86,7 +86,7 @@ Before you begin, ensure you have:
 
 Open your terminal and execute the following command, replacing `<gitlab.example.com>` with your GitLab instance URL:
 
-```bash
+``` bash
 claude mcp add --transport http GitLab https://<gitlab.example.com>/api/v4/mcp
 ```
 
@@ -146,7 +146,7 @@ With Claude Code connected to GitLab via MCP, you can:
 
 Here are some example prompts you can use with Claude Code once connected:
 
-```
+``` text
 "Find all high-priority issues assigned to me in project ABC"
 
 "What merge requests were merged in the last week?"

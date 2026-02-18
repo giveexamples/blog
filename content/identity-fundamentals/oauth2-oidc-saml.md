@@ -152,7 +152,7 @@ Use OAuth 2.0 if any of these are true:
 - Rich attribute exchange
 
 ### SAML Flow
-```
+``` text
 User → Service Provider (SP) → Identity Provider (IdP) → IdP authenticates → SAML assertion → SP grants access
 ```
 
