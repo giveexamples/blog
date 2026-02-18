@@ -901,7 +901,7 @@ az storage container create \
 ### Issue 1: "No subscriptions found"
 
 **Error:**
-```
+```text
 ERROR: No subscriptions found for user@example.com.
 ```
 
@@ -914,7 +914,7 @@ az login --allow-no-subscriptions
 ### Issue 2: "Insufficient privileges"
 
 **Error:**
-```
+```text
 (Authorization_RequestDenied) Insufficient privileges to complete the operation.
 ```
 
@@ -933,7 +933,7 @@ az ad signed-in-user show --query '{UPN:userPrincipalName, ObjectId:id}'
 ### Issue 3: Token Expired
 
 **Error:**
-```
+```text
 AADSTS70043: The refresh token has expired due to inactivity.
 ```
 
@@ -947,7 +947,7 @@ az login --allow-no-subscriptions
 ### Issue 4: Provider Configuration Not Found
 
 **Error:**
-```
+```text
 Error: Failed to instantiate provider "azuread"
 ```
 
@@ -965,7 +965,7 @@ terraform init
 ### Issue 5: "Use of undeclared resource"
 
 **Error:**
-```
+```text
 Error: Reference to undeclared resource
 ```
 
@@ -993,7 +993,7 @@ For CI/CD and production:
 
 Structure your Terraform projects:
 
-```
+```text
 entra-terraform/
 ├── main.tf              # Provider and main resources
 ├── variables.tf         # Input variables
