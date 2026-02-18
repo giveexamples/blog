@@ -2,9 +2,13 @@
 title = 'About Me'
 date = 2026-01-26
 draft = false
+author = "Saeed Afshari"
+description = "Personal technical blog of Saeed Afshari, Staff Software Engineer at Flix GmbH."
 +++
 
-Hi, I’m **Saeed Afshari**, a Staff Software Engineer at [Flix GmbH](https://www.flixbus.com/).
+GiveExamples.com is the personal technical blog of Saeed Afshari.
+
+Hi, I'm **Saeed Afshari**, a Staff Software Engineer at [Flix GmbH](https://www.flixbus.com/).
 
 I am passionate about building reliable, scalable, and secure software systems. My main interests lie in system architecture, cloud technologies, identity and security, and creating solutions that are not only technically sound but also practical and maintainable in production. This blog is my space to share real-world experiences, technical insights, and lessons learned along the way.
 

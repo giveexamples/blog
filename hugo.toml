@@ -4,6 +4,7 @@ canonifyURLs = false
 languageCode = 'en-us'
 title = '🏠 GiveExamples'
 theme = "PaperMod"
+author = "Saeed Afshari"
 
 [services.googleAnalytics]
 ID = "G-J3LM16S9PR"
@@ -30,6 +31,11 @@ weight = 9
 name = "About"
 url = "/about/"
 weight = 10
+
+[[menu.main]]
+name = "Legal"
+url = "/impressum/"
+weight = 15
 
 [params]
 ShowTags = true

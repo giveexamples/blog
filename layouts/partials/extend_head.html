@@ -355,3 +355,24 @@
     }
 }
 </style>
+
+{{- if or (eq .RelPermalink "/about/") (eq .Title "About Me") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Saeed Afshari",
+  "url": "https://giveexamples.com",
+  "jobTitle": "Staff Software Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Flix GmbH"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/saeed-afshari-22724a68/",
+    "https://github.com/giveexamples"
+  ],
+  "email": "mailto:saeed.afshari8@gmail.com"
+}
+</script>
+{{- end }}
