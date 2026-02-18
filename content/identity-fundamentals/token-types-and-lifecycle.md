@@ -88,7 +88,7 @@ Access tokens are short-lived for security. Refresh tokens allow:
 
 #### Refresh Token Flow
 
-```
+``` text
 1. Initial authentication → Access Token (15 min) + Refresh Token (7 days)
 2. Access token expires
 3. Client sends refresh token → New Access Token (15 min)
