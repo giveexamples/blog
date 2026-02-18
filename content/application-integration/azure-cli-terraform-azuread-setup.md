@@ -1123,8 +1123,7 @@ You now have a complete setup for managing Entra ID resources with Azure CLI and
 - Implement conditional access policies
 - Automate identity governance
 
-Check out these related articles:
-- [Securing Spring Boot APIs with MS Entra ID]({{< ref "spring-boot-msentra-authentication" >}})
+For more context on identity concepts, check out:
 - [Understanding OAuth 2.0 and OIDC]({{< ref "oauth2-oidc-saml" >}})
 
 ## Further Reading
