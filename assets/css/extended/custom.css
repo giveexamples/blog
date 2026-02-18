@@ -1,0 +1,19 @@
+/* Custom CSS overrides for code blocks */
+
+/* Fix code block font and sizing */
+.post-content pre code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/* Fix inline code font and sizing */
+.post-content code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    font-size: 14px;
+}
+
+/* Ensure pre elements don't have oversized fonts */
+.post-content pre {
+    font-size: 14px;
+}
