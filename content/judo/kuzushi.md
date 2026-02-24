@@ -20,6 +20,26 @@ Without effective kuzushi, even technically precise throws lack efficiency and r
 
 ---
 
+## Recommended Video Resources
+
+### Kuzushi Fundamentals (Kodokan Demonstration)
+
+{{< youtube 0ryNzeo3eoc >}}
+
+---
+
+### Kuzushi - Judo Excellence wth Neil Adams
+
+{{< youtube luK9Eklbn78 >}}
+
+---
+
+### Kuzushi - Japanese Kuzushi: the SECRET element
+
+{{< youtube cM5kV9DRr7w >}}
+
+---
+
 ## The Three Phases of a Throw
 
 Traditional Judo divides throwing technique (*nage-waza*) into three phases:
@@ -178,21 +198,3 @@ Beginners practice it as a step.
 Experts embody it as a continuous process.
 
 Master kuzushi—and throwing becomes inevitable.
-
-## Recommended Video Resources
-
-### Kuzushi Fundamentals (Kodokan Demonstration)
-
-{{< youtube 0ryNzeo3eoc >}}
-
----
-
-### Kuzushi - Judo Excellence wth Neil Adams
-
-{{< youtube luK9Eklbn78 >}}
-
----
-
-### Kuzushi - Japanese Kuzushi: the SECRET element
-
-{{< youtube cM5kV9DRr7w >}}
