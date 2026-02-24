@@ -1,11 +1,11 @@
 ---
 title: "Judo Kuzushi: The Science and Strategy of Breaking Balance"
-date: 2026-02-224
+date: 2026-02-24
 draft: false
 description: "An in-depth technical breakdown of kuzushi in Judo — biomechanical foundations, tactical applications, and advanced training methodology."
 weight: 1
 categories: ["Judo", "Training"]
-tags: ["authentication", "authorization", "auth", "login", "security", "access-control", "IAM"]
+tags: ["judo", "kuzushi", "balance", "technique", "biomechanics", "martial-arts"]
 ShowReadingTime: true
 ShowShareButtons: true
 ShowPostNavLinks: true
@@ -184,7 +184,7 @@ Master kuzushi—and throwing becomes inevitable.
 ### Kuzushi Fundamentals (Kodokan Demonstration)
 
 <iframe width="100%" height="400"
-src="https://www.youtube.com/watch?v=0ryNzeo3eoc"
+src="https://www.youtube.com/embed/0ryNzeo3eoc"
 title="All about Kuzushi"
 frameborder="0"
 allowfullscreen>
@@ -195,7 +195,7 @@ allowfullscreen>
 ### Kuzushi - Judo Excellence wth Neil Adams
 
 <iframe width="100%" height="400"
-src="https://www.youtube.com/watch?v=luK9Eklbn78"
+src="https://www.youtube.com/embed/luK9Eklbn78"
 title="Kuzushi - Judo Excellence wth Neil Adams"
 frameborder="0"
 allowfullscreen>
@@ -204,7 +204,7 @@ allowfullscreen>
 ### Kuzushi -Japanese Kuzushi: the SECRET element
 
 <iframe width="100%" height="400"
-src="https://www.youtube.com/watch?v=cM5kV9DRr7w"
+src="https://www.youtube.com/embed/cM5kV9DRr7w"
 title="Japanese Kuzushi: the SECRET element"
 frameborder="0"
 allowfullscreen>
