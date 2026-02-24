@@ -183,29 +183,16 @@ Master kuzushi—and throwing becomes inevitable.
 
 ### Kuzushi Fundamentals (Kodokan Demonstration)
 
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/0ryNzeo3eoc"
-title="All about Kuzushi"
-frameborder="0"
-allowfullscreen>
-</iframe>
+{{< youtube 0ryNzeo3eoc >}}
 
 ---
 
 ### Kuzushi - Judo Excellence wth Neil Adams
 
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/luK9Eklbn78"
-title="Kuzushi - Judo Excellence wth Neil Adams"
-frameborder="0"
-allowfullscreen>
-</iframe>
+{{< youtube luK9Eklbn78 >}}
 
-### Kuzushi -Japanese Kuzushi: the SECRET element
+---
 
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/cM5kV9DRr7w"
-title="Japanese Kuzushi: the SECRET element"
-frameborder="0"
-allowfullscreen>
-</iframe>
+### Kuzushi - Japanese Kuzushi: the SECRET element
+
+{{< youtube cM5kV9DRr7w >}}
