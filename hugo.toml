@@ -18,6 +18,11 @@ url = "/articles/"
 weight = 5
 
 [[menu.main]]
+name = "Judo"
+url = "/judo/"
+weight = 6
+
+[[menu.main]]
 name = "Archive"
 url = "/archives/"
 weight = 8
