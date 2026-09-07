@@ -44,7 +44,7 @@ weight = 15
 
 [params]
 ShowTags = true
-mainSections = ["identity-fundamentals", "performance-optimization", "application-integration", "artificial-intelligence"]
+mainSections = ["identity-fundamentals", "performance-optimization", "application-integration", "artificial-intelligence", "software-architecture"]
 
 [params.assets]
 favicon = "/favicon.ico"
