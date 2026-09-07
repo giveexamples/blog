@@ -1,0 +1,5 @@
+paths:
+  knowledge_base: .fabrics/standards/knowledge-base.md
+
+remote:
+  default_branch: main

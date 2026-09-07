@@ -92,14 +92,15 @@ document.getElementById('modal-search-input').addEventListener('input', function
         return;
     }
 
+    const escape = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     resultsContainer.innerHTML = results.slice(0, 10).map(result => {
         const item = result.item;
         const summary = item.summary || item.content.substring(0, 150) + '...';
         return `
             <li>
-                <a href="${item.permalink}">
-                    <div class="search-item-title">${item.title}</div>
-                    <div class="search-item-summary">${summary}</div>
+                <a href="${escape(item.permalink)}">
+                    <div class="search-item-title">${escape(item.title)}</div>
+                    <div class="search-item-summary">${escape(summary)}</div>
                 </a>
             </li>
         `;
