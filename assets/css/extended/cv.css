@@ -1,0 +1,76 @@
+/* CV page */
+.cv-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cv-photo {
+    flex: none;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: var(--theme);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cv-download-btn:hover {
+    opacity: 0.85;
+}
+
+.cv .post-content h2 {
+    margin-top: 28px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cv .post-content h3 {
+    margin: 20px 0 2px;
+}
+
+.cv .post-content h3 + p > em {
+    color: var(--secondary);
+}
+
+/* PDF export: the PDF is printed from the /cv/ page */
+@page { size: A4; margin: 16mm 16mm; background: #fefefe; }
+
+@media print {
+    header.header, footer.footer, .cv-download, .breadcrumbs, #top-link { display: none !important; }
+
+    :root, body, body.dark { --theme: #fff !important; --entry: #fff !important; --primary: #111 !important; --secondary: #555 !important; --content: #222 !important; --border: #ccc !important; --code-bg: #f1f1f1 !important; }
+    body, .cv, .cv .post-title, .cv .post-content h2, .cv .post-content h3, .cv .post-content strong, .cv .post-description { color: #111 !important; }
+    .cv .post-content { color: #222 !important; }
+    .cv .post-content h3 + p > em { color: #555 !important; }
+    .cv .post-content code { background: #f1f1f1 !important; color: #111 !important; font-size: 9pt; padding: 0 3px; border-radius: 3px; }
+
+    html, body, body.dark { background: #fefefe !important; color-scheme: light !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { max-width: none; padding: 0; margin: 0; }
+    .cv .post-header { margin: 0 0 6px; }
+    .cv-heading { gap: 16px; }
+    .cv-photo { width: 26mm; height: 26mm; }
+    .cv .post-title { font-size: 26px; margin: 0; }
+    .cv .post-description { font-size: 9.5pt; margin: 2px 0 0; color: #444 !important; }
+
+    .cv .post-content { font-size: 10pt; line-height: 1.38; color: #222; }
+    .cv .post-content h2 { font-size: 12.5pt; margin: 14px 0 6px; break-after: avoid; text-transform: uppercase; letter-spacing: .04em; }
+    .cv .post-content h3 { font-size: 10.5pt; margin: 10px 0 1px; break-after: avoid; }
+    .cv .post-content p { margin: 0 0 4px; }
+    .cv .post-content ul { margin: 2px 0 6px; padding-left: 16px; }
+    .cv .post-content li { margin: 0 0 2px; }
+    .cv .post-content li, .cv .post-content h3 { break-inside: avoid; }
+    .cv a { color: inherit; text-decoration: none; }
+}

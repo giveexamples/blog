@@ -38,6 +38,11 @@ url = "/about/"
 weight = 10
 
 [[menu.main]]
+name = "CV"
+url = "/cv/"
+weight = 11
+
+[[menu.main]]
 name = "Legal"
 url = "/impressum/"
 weight = 15
