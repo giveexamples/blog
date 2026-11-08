@@ -1,0 +1,25 @@
+{{- define "main" }}
+
+<article class="post-single cv">
+  <header class="post-header">
+    <div class="cv-heading">
+      <div class="cv-heading-text">
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{- with .Description }}<div class="post-description">{{ . }}</div>{{- end }}
+      </div>
+      {{- with .Params.photo }}
+      <img class="cv-photo" src="{{ . | relURL }}" alt="Photo of {{ $.Title }}" width="117" height="117">
+      {{- end }}
+    </div>
+    <p class="cv-download">
+      <a class="cv-download-btn" href="{{ .Params.pdf | relURL }}" download>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </p>
+  </header>
+
+  <div class="post-content">{{ .Content }}</div>
+</article>
+
+{{- end }}
